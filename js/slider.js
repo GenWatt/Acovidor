@@ -7,7 +7,7 @@ export default class Slider {
         this.currentSlide = 0
         this.maxSlides = slides ? slides.length : null
         this.prevSlide = null
-        this.slideMesurements = this.slider.getBoundingClientRect()
+        this.slideMesurements = this.slider ? this.slider.getBoundingClientRect() : null
         this.gapBeetwenSlides = gapBeetwenSlides
     }
 
@@ -40,7 +40,6 @@ export default class Slider {
         this.slider.style.transform = `translateX(${translateX * slideIndex * -1}px)`
 
         this.setClassNames(slideIndex)
-
         this.prevSlide = slideIndex
     }
 

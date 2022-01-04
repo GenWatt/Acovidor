@@ -1,0 +1,162 @@
+.slider {
+    position: relative;
+}
+
+.slider .slides {
+    display: grid;
+    gap: 100vw;
+    transition: transform .4s ease;
+}
+
+.slides .slide {
+    transform: scale(1.1) translateY(-20px);
+    transition: transform .6s ease;
+}
+
+.slides .slide.active {
+    transform: scale(1) translateY(0);
+}
+
+.comments-container {
+    margin-right: 19px;
+    margin-left: 19px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.comments-header {
+    width: 100%;
+    height: 152px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.comments-wrapper {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comments-wrapper img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 39px;
+}
+
+.comment-name h2 {
+    color: var(--secondary-font-color);
+    height: 78px;
+    width: 100%;
+    margin-top: 14.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.comments-wrapper .profesion {
+    color: var(--secondary-color);
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.comment-main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-main-text .comment {
+    width: 338px;
+    height: 443px;
+    color: var(--secondary-font-color);
+    margin-top: 16px;
+}
+
+.slide-btn {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    border-radius: 50%;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-font-color);
+}
+
+.slide-btn.prev {
+    left: 0;
+}
+
+.slide-btn.next {
+    right: 0;
+}
+
+@media only screen and (min-width: 1100px) {
+    .comments-wrapper {
+        max-width: 895px;
+        margin: auto auto;
+    }
+    .user-info {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .comments-wrapper .user-info img {
+        grid-row: 1/3;
+        grid-column: 1/2;
+        margin-left: 23px;
+        margin-top: -8px;
+    }
+    .comments-wrapper .user-info .comment-name {
+        grid-column: 2/12;
+        grid-row: 1/2;
+        margin-left: 6px;
+    }
+    .comments-wrapper .user-info .profesion {
+        grid-column: 2/12;
+        grid-row: 2/3;
+        justify-content: flex-start;
+        margin-left: 6px;
+        margin-bottom: 38px;
+    }
+    .comments-wrapper .comment {
+        width: 100%;
+        margin-left: 23px;
+        height: auto;
+        margin-bottom: 20px;
+        margin-top: -15px;
+    }
+    .slide-btn {
+        background-color: var(--primary-color);
+        cursor: pointer;
+    }
+    .slide-btn:hover {
+        animation: scale-up-down 1.2s ease-in-out infinite;
+    }
+    @keyframes scale-up-down {
+        0% {
+            transform: scale(1) translateY(-50%);
+        }
+        100% {
+            transform: scale(1.1) translateY(-50%);
+        }
+    }
+}

@@ -19,7 +19,7 @@
     "bugs": {
         "url": "https://github.com/GenWatt/Acovidor/issues"
     },
-    "homepage": "https://GenWatt.github.io/Acovidor/",
+    "homepage": "https://genwatt.github.io/Acovidor/",
     "devDependencies": {
         "gh-pages": "^3.2.3"
     }

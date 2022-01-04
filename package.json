@@ -1,0 +1,26 @@
+{
+    "name": "acovidor",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/GenWatt/Acovidor.git"
+    },
+    "keywords": [
+        "covid",
+        "medecine"
+    ],
+    "author": "Adrian Raszka",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/GenWatt/Acovidor/issues"
+    },
+    "homepage": "https://GenWatt.github.io/Acovidor/",
+    "devDependencies": {
+        "gh-pages": "^3.2.3"
+    }
+}

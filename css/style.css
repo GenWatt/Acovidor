@@ -5,6 +5,7 @@
 @import url('./certificats.css');
 @import url('./comments.css');
 @import url('./footer.css');
+@import url('./page-nav.css');
 * {
     margin: 0;
     padding: 0;
@@ -17,16 +18,21 @@
     --primary-font-color: #333333;
     --secondary-font-color: #FFFFFF;
     --primary-alpha-color: rgba(68, 231, 172, 0.25);
-    --xl: 42px;
-    --lg: 32px;
-    --md: 18px;
-    --sm: 12px;
+    --xl: 2.8rem;
+    --lg: 2rem;
+    --md: 1.1rem;
+    --sm: .7rem;
     --golden-point: 1.6;
+}
+
+.container {
+    padding: 2rem;
 }
 
 html {
     font-family: Roboto;
     overflow-x: hidden;
+    font-size: 13px;
 }
 
 body {
@@ -74,8 +80,7 @@ body {
 }
 
 .--btn {
-    width: 244px;
-    height: 87px;
+    padding: 40px 80px;
     background-color: var(--primary-color);
     text-transform: uppercase;
     display: flex;
@@ -88,13 +93,42 @@ body {
     color: var(--secondary-font-color);
 }
 
+.scroll-up {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    transition: background-color .2s ease;
+    color: var(--secondary-font-color);
+    transform: scale(0) translateY(10px);
+    transition: transform .3s ease-in-out;
+}
+
+.scroll-up.show {
+    transform: scale(1) translateY(0);
+}
+
 @media only screen and (min-width: 1100px) {
+    html {
+        font-size: 16px;
+    }
+    .scroll-up:hover {
+        cursor: pointer;
+        background-color: var(--secondary-color);
+    }
     .--btn {
-        width: 247px;
-        height: 122px;
         cursor: pointer;
     }
     .--btn:hover {
         background-color: var(--secondary-color);
+    }
+    .container {
+        padding: 6rem;
     }
 }

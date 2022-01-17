@@ -1,0 +1,52 @@
+.page-nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000000;
+    background-color: var(--primary-color);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform .2s ease-in, opacity .3s ease-in-out;
+}
+
+.close-hamburger {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: var(--secondary-font-color);
+    font-size: var(--lg);
+    transition: transform .4s ease-in;
+}
+
+.page-nav .page-nav-list {
+    list-style-type: none;
+    padding: 2rem 3rem;
+}
+
+.page-nav.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.page-nav-item {
+    color: var(--secondary-font-color);
+    transition: letter-spacing .6s ease-in;
+}
+
+@media only screen and (min-width: 1100px) {
+    .page-nav-item {
+        cursor: pointer;
+    }
+    .page-nav-item:hover {
+        letter-spacing: 2px;
+    }
+    .close-hamburger {
+        cursor: pointer;
+    }
+    .close-hamburger:hover {
+        transform: rotate(360deg);
+    }
+    .page-nav .page-nav-list {
+        padding: 2rem 7rem;
+    }
+}

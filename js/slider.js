@@ -13,7 +13,6 @@ export default class Slider {
 
     _update = () => {
         if (this.slider) {
-            this.slideMesurements = this.slider.getBoundingClientRect()
             this.gapBeetwenSlides = window.innerWidth
             this.changeSlide(this.currentSlide)
         }
@@ -32,9 +31,7 @@ export default class Slider {
     }
 
     changeSlide(slideIndex) {
-        if (!this.slideMesurements) return
-        const { width } = this.slideMesurements
-        const translateX = width + this.gapBeetwenSlides
+        const translateX = this.slider.offsetWidth + this.gapBeetwenSlides
             // set translate x poperty to slider
         this.currentSlide = slideIndex
         this.slider.style.transform = `translateX(${translateX * slideIndex * -1}px)`

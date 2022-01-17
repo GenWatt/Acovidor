@@ -10,6 +10,7 @@
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
 .header-product h2 {
@@ -55,7 +56,6 @@
         display: flex;
     }
     .product-description-container .description {
-        width: 60%;
         margin-top: 0;
     }
     .product-description-container .description .product-description {

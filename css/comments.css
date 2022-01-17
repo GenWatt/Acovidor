@@ -18,19 +18,18 @@
 }
 
 .comments-container {
-    margin-right: 19px;
-    margin-left: 19px;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: var(--primary-alpha-color);
 }
 
 .comments-header {
     width: 100%;
-    height: 152px;
+    min-height: 152px;
     color: var(--primary-color);
     text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .comments-wrapper {
@@ -38,6 +37,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: .5rem;
 }
 
 .user-info {
@@ -55,16 +56,17 @@
 
 .comment-name h2 {
     color: var(--secondary-font-color);
-    height: 78px;
+    min-height: 78px;
     width: 100%;
     margin-top: 14.5px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .comments-wrapper .profesion {
     color: var(--secondary-color);
-    height: 45px;
+    min-height: 45px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -78,8 +80,6 @@
 }
 
 .comment-main-text .comment {
-    width: 338px;
-    height: 443px;
     color: var(--secondary-font-color);
     margin-top: 16px;
 }
@@ -94,7 +94,7 @@
     align-items: center;
     position: absolute;
     z-index: 3;
-    top: 50%;
+    top: 45%;
     transform: translateY(-50%);
     color: var(--secondary-font-color);
 }
@@ -111,13 +111,16 @@
     .comments-wrapper {
         max-width: 895px;
         margin: auto auto;
+        padding: 2rem;
+    }
+    .comments-header {
+        text-align: left;
     }
     .user-info {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: 1fr 1fr;
         width: 100%;
-        margin-top: 20px;
     }
     .comments-wrapper .user-info img {
         grid-row: 1/3;
@@ -128,25 +131,27 @@
     .comments-wrapper .user-info .comment-name {
         grid-column: 2/12;
         grid-row: 1/2;
-        margin-left: 6px;
+        margin-left: 2rem;
+    }
+    .comments-wrapper .user-info .comment-name h2 {
+        text-align: initial;
     }
     .comments-wrapper .user-info .profesion {
         grid-column: 2/12;
         grid-row: 2/3;
         justify-content: flex-start;
-        margin-left: 6px;
+        margin-left: 2rem;
         margin-bottom: 38px;
     }
     .comments-wrapper .comment {
         width: 100%;
-        margin-left: 23px;
         height: auto;
-        margin-bottom: 20px;
         margin-top: -15px;
     }
     .slide-btn {
         background-color: var(--primary-color);
         cursor: pointer;
+        top: 50%;
     }
     .slide-btn:hover {
         animation: scale-up-down 1.2s ease-in-out infinite;

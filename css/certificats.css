@@ -48,6 +48,10 @@
     align-items: center;
 }
 
+.certificats-container {
+    padding-bottom: 120px!important;
+}
+
 @media only screen and (min-width: 1100px) {
     .certificat-box {
         width: 33.33%;

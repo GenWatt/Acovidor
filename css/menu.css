@@ -16,6 +16,10 @@
     transform: translateY(-200px);
 }
 
+.menu__logo {
+    padding-left: 66px;
+}
+
 .menu__logo img {
     width: 68px;
     height: 68px;
